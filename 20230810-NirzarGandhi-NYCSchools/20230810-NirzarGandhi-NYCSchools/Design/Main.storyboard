@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5ix-qt-XCt">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Medium.ttf">
+            <string>Inter-Medium</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="JHI-qe-JQo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="5ix-qt-XCt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4IS-Yp-cGy">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="63i-nJ-LVc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U5c-WV-RGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8.8000000000000007" y="-27.436281859070466"/>
+        </scene>
+        <!--School ListVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SchoolListVC" id="BYZ-38-t0r" customClass="SchoolListVC" customModule="_0230810_NirzarGandhi_NYCSchools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search by school name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x6B-Lv-cfT">
+                                <rect key="frame" x="20" y="30" width="335" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2gH-sM-Cxr"/>
+                                </constraints>
+                                <color key="textColor" name="AppPrimaryFont"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftView">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingRightView">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="AppPrimaryFont"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Tea-nR-QAn"/>
+                                </connections>
+                            </textField>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="J3l-zP-Rcf">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellSchoolList" id="uvh-oo-owp" customClass="SchoolListTVC" customModule="_0230810_NirzarGandhi_NYCSchools" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="123"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uvh-oo-owp" id="Xcv-oi-ESu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-mI-daE">
+                                                    <rect key="frame" x="20" y="8" width="335" height="107"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Djg-nD-b5g">
+                                                            <rect key="frame" x="10" y="10" width="315" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
+                                                            <color key="textColor" name="AppBackground"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locations:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exn-JI-03S">
+                                                            <rect key="frame" x="10" y="20" width="82" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                                            <color key="textColor" name="AppBackground"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n5-2s-C8l">
+                                                            <rect key="frame" x="10" y="39" width="315" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                            <color key="textColor" name="AppBackground"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gI1-PJ-9Y1">
+                                                            <rect key="frame" x="10" y="49" width="121" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                                            <color key="textColor" name="AppBackground"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3V-1i-lTO">
+                                                            <rect key="frame" x="10" y="68" width="315" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                            <color key="textColor" name="AppBackground"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yD4-Vs-HvI">
+                                                            <rect key="frame" x="10" y="78" width="116.5" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                                            <color key="textColor" name="AppBackground"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwM-9F-E0r">
+                                                            <rect key="frame" x="10" y="97" width="315" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                            <color key="textColor" name="AppBackground"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="AppPrimaryFont"/>
+                                                    <constraints>
+                                                        <constraint firstItem="yD4-Vs-HvI" firstAttribute="leading" secondItem="6UL-mI-daE" secondAttribute="leading" constant="10" id="5M5-xL-SWb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4n5-2s-C8l" secondAttribute="trailing" constant="10" id="5OZ-9G-T6s"/>
+                                                        <constraint firstItem="Djg-nD-b5g" firstAttribute="leading" secondItem="6UL-mI-daE" secondAttribute="leading" constant="10" id="LbG-YN-dIi"/>
+                                                        <constraint firstItem="4n5-2s-C8l" firstAttribute="top" secondItem="exn-JI-03S" secondAttribute="bottom" id="MbU-ce-frb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lwM-9F-E0r" secondAttribute="trailing" constant="10" id="OAy-7a-t6Q"/>
+                                                        <constraint firstItem="4n5-2s-C8l" firstAttribute="leading" secondItem="6UL-mI-daE" secondAttribute="leading" constant="10" id="OYO-El-L6f"/>
+                                                        <constraint firstItem="Djg-nD-b5g" firstAttribute="top" secondItem="6UL-mI-daE" secondAttribute="top" constant="10" id="Oyt-9X-JPV"/>
+                                                        <constraint firstItem="lwM-9F-E0r" firstAttribute="leading" secondItem="6UL-mI-daE" secondAttribute="leading" constant="10" id="RVi-TM-DvR"/>
+                                                        <constraint firstItem="lwM-9F-E0r" firstAttribute="top" secondItem="yD4-Vs-HvI" secondAttribute="bottom" id="Ryq-wz-aVT"/>
+                                                        <constraint firstItem="exn-JI-03S" firstAttribute="top" secondItem="Djg-nD-b5g" secondAttribute="bottom" constant="10" id="S7O-hz-7EB"/>
+                                                        <constraint firstItem="gI1-PJ-9Y1" firstAttribute="leading" secondItem="6UL-mI-daE" secondAttribute="leading" constant="10" id="TIG-6j-ggr"/>
+                                                        <constraint firstItem="exn-JI-03S" firstAttribute="leading" secondItem="6UL-mI-daE" secondAttribute="leading" constant="10" id="ciB-JP-OxU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="b3V-1i-lTO" secondAttribute="trailing" constant="10" id="eS0-k1-qvG"/>
+                                                        <constraint firstItem="b3V-1i-lTO" firstAttribute="leading" secondItem="6UL-mI-daE" secondAttribute="leading" constant="10" id="gZq-Kd-QwH"/>
+                                                        <constraint firstItem="b3V-1i-lTO" firstAttribute="top" secondItem="gI1-PJ-9Y1" secondAttribute="bottom" id="hvV-rp-sSH"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lwM-9F-E0r" secondAttribute="bottom" constant="10" id="kYA-xN-u28"/>
+                                                        <constraint firstItem="gI1-PJ-9Y1" firstAttribute="top" secondItem="4n5-2s-C8l" secondAttribute="bottom" constant="10" id="lo9-vh-vFg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Djg-nD-b5g" secondAttribute="trailing" constant="10" id="tc9-Fy-Iwb"/>
+                                                        <constraint firstItem="yD4-Vs-HvI" firstAttribute="top" secondItem="b3V-1i-lTO" secondAttribute="bottom" constant="10" id="ue8-8b-EEy"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="6UL-mI-daE" firstAttribute="leading" secondItem="Xcv-oi-ESu" secondAttribute="leading" constant="20" id="0pd-Uc-Tck"/>
+                                                <constraint firstAttribute="bottom" secondItem="6UL-mI-daE" secondAttribute="bottom" constant="8" id="9qr-aZ-THc"/>
+                                                <constraint firstAttribute="trailing" secondItem="6UL-mI-daE" secondAttribute="trailing" constant="20" id="FEU-kn-Glj"/>
+                                                <constraint firstItem="6UL-mI-daE" firstAttribute="top" secondItem="Xcv-oi-ESu" secondAttribute="top" constant="8" id="TsX-0T-aTV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="lblEmailId" destination="lwM-9F-E0r" id="YZK-Rb-qBX"/>
+                                            <outlet property="lblLocation" destination="4n5-2s-C8l" id="766-Ls-xp4"/>
+                                            <outlet property="lblPhoneNumber" destination="b3V-1i-lTO" id="zFH-cv-i25"/>
+                                            <outlet property="lblSchoolName" destination="Djg-nD-b5g" id="eTY-8z-zKR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="uh7-zE-Uj8"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="n4E-Re-ngE"/>
+                                </connections>
+                            </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mp-ml-3a8">
+                                <rect key="frame" x="130.5" y="325" width="114.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                <color key="textColor" name="AppGray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="x6B-Lv-cfT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="44K-Ch-cCJ"/>
+                            <constraint firstItem="J3l-zP-Rcf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="99z-a8-Ezw"/>
+                            <constraint firstItem="5mp-ml-3a8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9tE-rF-Mjc"/>
+                            <constraint firstAttribute="trailing" secondItem="J3l-zP-Rcf" secondAttribute="trailing" id="KSw-nG-muJ"/>
+                            <constraint firstItem="5mp-ml-3a8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W4e-GR-jpY"/>
+                            <constraint firstItem="J3l-zP-Rcf" firstAttribute="top" secondItem="x6B-Lv-cfT" secondAttribute="bottom" constant="16" id="kOn-bk-EAG"/>
+                            <constraint firstItem="x6B-Lv-cfT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="rSR-Mg-7YS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x6B-Lv-cfT" secondAttribute="trailing" constant="20" id="rl5-6k-r51"/>
+                            <constraint firstAttribute="bottom" secondItem="J3l-zP-Rcf" secondAttribute="bottom" id="ySx-Kc-rX1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vCl-K1-Xdh"/>
+                    <connections>
+                        <outlet property="lblNoData" destination="5mp-ml-3a8" id="wQe-NS-Oox"/>
+                        <outlet property="tblSchoolList" destination="J3l-zP-Rcf" id="Egj-FQ-kIn"/>
+                        <outlet property="txtSearch" destination="x6B-Lv-cfT" id="Msx-B2-u3H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="-27"/>
+        </scene>
+        <!--School DetailsVC-->
+        <scene sceneID="J7X-DQ-4oh">
+            <objects>
+                <viewController storyboardIdentifier="SchoolDetailsVC" id="U28-Ck-Kbv" customClass="SchoolDetailsVC" customModule="_0230810_NirzarGandhi_NYCSchools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QAP-sT-aJD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiA-kM-Z0d">
+                                <rect key="frame" x="323" y="30" width="32" height="32"/>
+                                <color key="tintColor" name="AppPrimaryFont"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic_close"/>
+                                <connections>
+                                    <action selector="btnCloseAction:" destination="U28-Ck-Kbv" eventType="touchUpInside" id="u2b-Gy-rw3"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvN-xA-bpy">
+                                <rect key="frame" x="0.0" y="78" width="375" height="589"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPQ-vT-rOy">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="594.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3a-BM-JrG">
+                                                <rect key="frame" x="20" y="0.0" width="335" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
+                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Iia-RA-bVr">
+                                                <rect key="frame" x="20" y="10" width="335" height="343.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="MWX-jb-SqJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locations:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4d9-fo-eya">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgZ-gK-XyW">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="rbX-vj-f2K">
+                                                        <rect key="frame" x="0.0" y="29.5" width="335" height="19.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJC-vx-qTh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6o-lv-cIg">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="IgE-M1-nuj">
+                                                        <rect key="frame" x="0.0" y="59" width="335" height="19.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNq-P6-RKS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNX-0G-nFd">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vQC-CO-2rh">
+                                                        <rect key="frame" x="0.0" y="88.5" width="335" height="19.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6g-8v-laE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxs-HM-oJh">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="f6n-4l-QQJ">
+                                                        <rect key="frame" x="0.0" y="118" width="335" height="19.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Students:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ut1-Ln-Xps">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIN-9P-bZZ">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7Vd-HZ-dBG">
+                                                        <rect key="frame" x="0.0" y="147.5" width="335" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Academic Opportunities 1:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiD-MY-mg3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="39"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb6-g9-GmC">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="VZt-lX-ezA">
+                                                        <rect key="frame" x="0.0" y="196.5" width="335" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Academic Opportunities 2:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZt-0B-MnZ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="39"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="443-Dc-MRc">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5Xi-1F-yRL">
+                                                        <rect key="frame" x="0.0" y="245.5" width="335" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extracurricular Activities:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9Q-jx-My2">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="39"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g07-yr-hpe">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="AYe-Ms-InB">
+                                                        <rect key="frame" x="0.0" y="294.5" width="335" height="19.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Sports:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg3-Wr-cOb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yug-zD-y2j">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="uB2-xo-lLX">
+                                                        <rect key="frame" x="0.0" y="324" width="335" height="19.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus Numbers:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMh-SO-lNU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fO-4l-Uga">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT Scores" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCo-Db-Znc">
+                                                <rect key="frame" x="20" y="373.5" width="335" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
+                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Juy-Rj-Nk0">
+                                                <rect key="frame" x="20" y="408" width="335" height="166.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="iUJ-PN-e4R">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Takers:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aS9-Ln-eib">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIC-4X-264">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Efi-ke-AGm">
+                                                        <rect key="frame" x="0.0" y="29.5" width="335" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maths Average Score:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-Ti-Tc4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="39"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sX-Iy-Mhb">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Xng-JS-Qqa">
+                                                        <rect key="frame" x="0.0" y="78.5" width="335" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reading Average Score:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKG-YE-BeN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="39"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kc-za-LEa">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="uL3-ml-Xux">
+                                                        <rect key="frame" x="0.0" y="127.5" width="335" height="39"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writing Average Score:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqI-jP-zcV">
+                                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="39"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="16"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ck5-91-ZY7">
+                                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                                                <color key="textColor" name="AppPrimaryFont"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="S3a-BM-JrG" secondAttribute="trailing" constant="20" id="1O2-cP-XXI"/>
+                                            <constraint firstAttribute="trailing" secondItem="Iia-RA-bVr" secondAttribute="trailing" constant="20" id="3J2-Yt-mZh"/>
+                                            <constraint firstItem="S3a-BM-JrG" firstAttribute="leading" secondItem="tPQ-vT-rOy" secondAttribute="leading" constant="20" id="3e4-qj-GBb"/>
+                                            <constraint firstItem="Iia-RA-bVr" firstAttribute="top" secondItem="S3a-BM-JrG" secondAttribute="bottom" constant="10" id="7jE-eK-kza"/>
+                                            <constraint firstAttribute="bottom" secondItem="Juy-Rj-Nk0" secondAttribute="bottom" constant="20" id="9ds-Xl-Pwo"/>
+                                            <constraint firstItem="jCo-Db-Znc" firstAttribute="top" secondItem="Iia-RA-bVr" secondAttribute="bottom" constant="20" id="FEH-F2-Ide"/>
+                                            <constraint firstItem="S3a-BM-JrG" firstAttribute="top" secondItem="tPQ-vT-rOy" secondAttribute="top" id="ICM-jn-Fqc"/>
+                                            <constraint firstItem="jCo-Db-Znc" firstAttribute="leading" secondItem="tPQ-vT-rOy" secondAttribute="leading" constant="20" id="JTk-cR-aBg"/>
+                                            <constraint firstItem="Juy-Rj-Nk0" firstAttribute="top" secondItem="jCo-Db-Znc" secondAttribute="bottom" constant="10" id="Nx2-ry-2jy"/>
+                                            <constraint firstAttribute="trailing" secondItem="Juy-Rj-Nk0" secondAttribute="trailing" constant="20" id="VHx-ty-M9r"/>
+                                            <constraint firstAttribute="trailing" secondItem="jCo-Db-Znc" secondAttribute="trailing" constant="20" id="bew-kO-rB5"/>
+                                            <constraint firstItem="Juy-Rj-Nk0" firstAttribute="leading" secondItem="tPQ-vT-rOy" secondAttribute="leading" constant="20" id="vox-ln-kCF"/>
+                                            <constraint firstItem="Iia-RA-bVr" firstAttribute="leading" secondItem="tPQ-vT-rOy" secondAttribute="leading" constant="20" id="zbj-sX-JE2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tPQ-vT-rOy" secondAttribute="bottom" id="5Me-nb-3KG"/>
+                                    <constraint firstItem="tPQ-vT-rOy" firstAttribute="leading" secondItem="lvN-xA-bpy" secondAttribute="leading" id="HxN-sf-foz"/>
+                                    <constraint firstAttribute="trailing" secondItem="tPQ-vT-rOy" secondAttribute="trailing" id="XNv-qC-NPG"/>
+                                    <constraint firstItem="tPQ-vT-rOy" firstAttribute="top" secondItem="lvN-xA-bpy" secondAttribute="top" id="Zy3-3n-7Jz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WW9-ue-Fdc"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="tPQ-vT-rOy" firstAttribute="width" secondItem="QAP-sT-aJD" secondAttribute="width" id="7mX-0b-dpi"/>
+                            <constraint firstItem="lvN-xA-bpy" firstAttribute="leading" secondItem="QAP-sT-aJD" secondAttribute="leading" id="DaN-kc-fS6"/>
+                            <constraint firstAttribute="trailing" secondItem="lvN-xA-bpy" secondAttribute="trailing" id="PiF-11-nYD"/>
+                            <constraint firstItem="WW9-ue-Fdc" firstAttribute="trailing" secondItem="QiA-kM-Z0d" secondAttribute="trailing" constant="20" id="VOw-1F-qXT"/>
+                            <constraint firstItem="QiA-kM-Z0d" firstAttribute="top" secondItem="WW9-ue-Fdc" secondAttribute="top" constant="10" id="XBn-jc-QpK"/>
+                            <constraint firstAttribute="bottom" secondItem="lvN-xA-bpy" secondAttribute="bottom" id="fFM-Da-xu9"/>
+                            <constraint firstItem="lvN-xA-bpy" firstAttribute="top" secondItem="QiA-kM-Z0d" secondAttribute="bottom" constant="16" id="kcK-6x-ifS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ah8-jS-mCd"/>
+                    <connections>
+                        <outlet property="lblAcademicOpportunities1" destination="Qb6-g9-GmC" id="9S2-wz-6kF"/>
+                        <outlet property="lblAcademicOpportunities2" destination="443-Dc-MRc" id="ghx-dT-sAS"/>
+                        <outlet property="lblBusNumbers" destination="9fO-4l-Uga" id="nWc-Gr-EcZ"/>
+                        <outlet property="lblEmailId" destination="WNX-0G-nFd" id="Ktw-Wm-Qjn"/>
+                        <outlet property="lblExtracurricularActivities" destination="g07-yr-hpe" id="HxK-W2-BwK"/>
+                        <outlet property="lblLocations" destination="TgZ-gK-XyW" id="JKv-ed-ymH"/>
+                        <outlet property="lblMathsScore" destination="4sX-Iy-Mhb" id="QNA-SG-3BV"/>
+                        <outlet property="lblPhoneNumber" destination="S6o-lv-cIg" id="Nxc-lU-8fe"/>
+                        <outlet property="lblReadingScore" destination="8Kc-za-LEa" id="Eny-Pt-iuI"/>
+                        <outlet property="lblSchoolName" destination="S3a-BM-JrG" id="Uea-gP-Ckc"/>
+                        <outlet property="lblSchoolSports" destination="yug-zD-y2j" id="nah-Sh-1TD"/>
+                        <outlet property="lblTestTakers" destination="YIC-4X-264" id="7QO-Io-4mr"/>
+                        <outlet property="lblTotalStudents" destination="lIN-9P-bZZ" id="b6Q-ML-Jle"/>
+                        <outlet property="lblWebsite" destination="hxs-HM-oJh" id="Bbr-D0-UA7"/>
+                        <outlet property="lblWritingScore" destination="ck5-91-ZY7" id="l45-EB-i1M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6f-Ks-fGM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1478" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_close" width="32" height="32"/>
+        <namedColor name="AppBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppGray">
+            <color red="0.66699999570846558" green="0.66699999570846558" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppPrimaryFont">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
